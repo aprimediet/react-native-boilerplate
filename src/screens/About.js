@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-import { material } from 'react-native-typography'
+import { StyleSheet, View } from 'react-native'
+import { Title } from 'react-native-paper'
 
 const About = () => (
   <View style={styles.container}>
-    <Text style={[styles.instructions, material.display1]}>About Screen</Text>
+    <Title style={styles.instructions}>About Screen</Title>
   </View>
 )
 

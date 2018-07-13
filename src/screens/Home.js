@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { StyleSheet, View } from 'react-native'
-import { Button, Text } from 'react-native-paper'
-import { material } from 'react-native-typography'
+import { Button, Title } from 'react-native-paper'
 
 
 export default class Home extends PureComponent {
@@ -23,7 +22,7 @@ export default class Home extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={[styles.instructions, material.display1]}>Home Screen</Text>
+        <Title style={styles.instructions}>Home Screen</Title>
         <Button raised onPress={this.goAbout}>
           About
         </Button>
