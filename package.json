@@ -1,0 +1,174 @@
+{
+  "name": "react-native-boilerplate",
+  "version": "0.0.1",
+  "description": "React Native Boilerplate",
+  "author": "Muhamad Aditya Prima",
+  "license": "BSD",
+  "main": "index.js",
+  "private": true,
+  "pre-commit": "lint",
+  "babel": {
+    "presets": [
+      "react-native"
+    ],
+    "plugins": [
+      ["module-resolver", {
+        "root": [ "." ],
+        "alias": {
+          "@": "./src/"
+        }
+      }]
+    ],
+    "env": {
+      "production": {
+        "plugins": [
+          "transform-react-remove-prop-types",
+          "transform-react-constant-elements",
+          "transform-react-inline-elements"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "universe",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "import",
+      "react",
+      "react-native",
+      "redux-saga"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ],
+      "class-method-use-this": 0,
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "import/imports-first": 0,
+      "import/newline-after-import": [
+        "error",
+        {
+          "count": 1
+        }
+      ],
+      "import/no-dynamic-require": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-named-as-default": 0,
+      "import/no-webpack-loader-syntax": 0,
+      "import/no-unresolved": 0,
+      "import/extensions": 0,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "max-len": 0,
+      "newline-per-chained-call": 0,
+      "no-confusing-arrow": 0,
+      "no-console": 1,
+      "no-use-before-define": 0,
+      "prefer-template": 2,
+      "react/display-name": 0,
+      "react/forbid-prop-types": 0,
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/jsx-no-target-blank": 0,
+      "react/require-default-props": 0,
+      "react/require-extension": 0,
+      "react/self-closing-comp": 0,
+      "react/prefer-stateless-function": [
+        "warn",
+        {
+          "ignorePureComponents": true
+        }
+      ],
+      "redux-saga/no-yield-in-race": 2,
+      "redux-saga/yield-effects": 2,
+      "require-yield": 0,
+      "semi": [
+        "error",
+        "never"
+      ],
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "semi": false
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:android": "react-native run-android",
+    "test": "jest"
+  },
+  "dependencies": {
+    "immutable": "3.8.2",
+    "prop-types": "15.6.2",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-typography": "1.3.0",
+    "react-navigation": "2.6.2",
+    "react-redux": "5.0.7",
+    "redux-immutable": "4.0.0",
+    "redux-saga": "0.16.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.5",
+    "babel-jest": "23.2.0",
+    "babel-plugin-import": "1.8.0",
+    "babel-plugin-module-resolver": "3.1.1",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.13",
+    "babel-preset-react-native": "5.0.2",
+    "chance": "1.0.16",
+    "cross-env": "5.2.0",
+    "eslint": "5.1.0",
+    "eslint-config-universe": "1.0.7",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-react": "7.10.0",
+    "eslint-plugin-react-native": "3.2.1",
+    "eslint-plugin-redux-saga": "0.9.0",
+    "faker": "4.1.0",
+    "jest": "23.3.0",
+    "json-schema-faker": "0.5.0-rc15",
+    "json-server": "0.14.0",
+    "nodemon": "1.17.5",
+    "prettier": "1.13.7",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
