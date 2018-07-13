@@ -1,20 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { DrawerSection, DrawerItem } from 'react-native-paper'
-// import { StyleSheet, View, Text } from 'react-native'
-// import { material } from 'react-native-typography'
 
-// export default () => (
-//   <View style={styles.container}>
-//     <Text style={material.title}>Sidebar</Text>
-//   </View>
-// )
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//   },
-// })
 export default class Sidebar extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
