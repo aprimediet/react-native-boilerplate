@@ -49,10 +49,18 @@ export default class AppBar extends PureComponent {
   }
 
   render() {
+    const {
+      scene: {
+        descriptor: {
+          options: { title },
+        },
+      },
+    } = this.props
+
     return (
       <Toolbar>
         {this.renderToolbarRight()}
-        <ToolbarContent title="Hello Paper" />
+        <ToolbarContent title={title || 'React Native Paper'} />
       </Toolbar>
     )
   }

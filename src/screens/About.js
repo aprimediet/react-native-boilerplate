@@ -2,11 +2,17 @@ import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { material } from 'react-native-typography'
 
-export default () => (
+const About = () => (
   <View style={styles.container}>
     <Text style={[styles.instructions, material.display1]}>About Screen</Text>
   </View>
 )
+
+About.navigationOptions = {
+  title: 'About',
+}
+
+export default About
 
 const styles = StyleSheet.create({
   container: {
