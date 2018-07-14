@@ -1,3 +1,6 @@
+/**
+ * AppBar
+ */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Toolbar, ToolbarBackAction, ToolbarAction, ToolbarContent } from 'react-native-paper'
