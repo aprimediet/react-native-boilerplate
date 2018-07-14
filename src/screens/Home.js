@@ -1,3 +1,6 @@
+/**
+ * Home Screen
+ */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { StyleSheet, View } from 'react-native'
