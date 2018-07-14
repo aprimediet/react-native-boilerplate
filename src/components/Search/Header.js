@@ -1,3 +1,6 @@
+/**
+ * Searchbar Header
+ */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Searchbar } from 'react-native-paper'

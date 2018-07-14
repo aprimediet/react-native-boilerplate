@@ -1,3 +1,6 @@
+/**
+ * Search Screen
+ */
 import React, { PureComponent } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Title } from 'react-native-paper'
