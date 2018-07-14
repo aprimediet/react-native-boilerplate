@@ -1,9 +1,10 @@
 import React from 'react'
 import { Provider as PaperProvider } from 'react-native-paper'
-import { DrawerNavigator } from '@/navigator'
+
+import Home from '@/screens/Home'
 
 export default () => (
   <PaperProvider>
-    <DrawerNavigator />
+    <Home />
   </PaperProvider>
 )
