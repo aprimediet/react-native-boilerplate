@@ -4,7 +4,7 @@ import createSagaMiddleware from 'redux-saga'
 import { fromJS } from 'immutable'
 
 // Import reducers
-import global from '@stores/global/reducer'
+import global from '@/stores/global/reducer'
 
 // Initial state
 const initialState = fromJS({})

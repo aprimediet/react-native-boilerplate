@@ -1,4 +1,4 @@
-import { TOGGLE_DARK_MODE } from '@constants/ActionTypes'
+import { TOGGLE_DARK_MODE } from '@/constants/ActionTypes'
 import { fromJS } from 'immutable'
 
 export const initialState = fromJS({
