@@ -25,6 +25,13 @@ export default class AppBar extends PureComponent {
     navigation.openDrawer()
   }
 
+  doSearch = () => {
+    // Actions when search button is pressed
+    const { navigation } = this.props
+
+    navigation.navigate('Search')
+  }
+
   renderToolbarRight = () => {
     // If headerLeft is provided in navigationOptions, return headerLeft
     // else, return back button when index is not 0
@@ -61,6 +68,7 @@ export default class AppBar extends PureComponent {
       <Toolbar>
         {this.renderToolbarRight()}
         <ToolbarContent title={title || 'React Native Paper'} />
+        <ToolbarAction icon="search" onPress={this.doSearch} />
       </Toolbar>
     )
   }
