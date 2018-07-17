@@ -137,15 +137,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "0.18.0",
     "immutable": "3.8.2",
     "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-native": "0.56.0",
-    "react-native-paper": "^1.11.0",
+    "react-native-paper": "1.11.0",
     "react-native-vector-icons": "4.6.0",
     "react-navigation": "2.6.2",
     "react-redux": "5.0.7",
-    "redux": "^4.0.0",
+    "redux": "4.0.0",
     "redux-immutable": "4.0.0",
     "redux-saga": "0.16.0"
   },
@@ -156,7 +157,7 @@
     "babel-jest": "23.2.0",
     "babel-plugin-module-resolver": "3.1.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
-    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
     "babel-plugin-transform-react-jsx-source": "6.22.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.13",
     "babel-preset-react-native": "5.0.2",
