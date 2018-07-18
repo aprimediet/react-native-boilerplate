@@ -3,7 +3,12 @@ import axios from 'axios'
 const parseJSON = (response) => {
   if (response.status === 204 || response.status === 205) return null
 
-  return response.data
+  // return response.data
+  return {
+    data: response.data,
+    total: response.headers['x-wp-total'] || 0,
+    totalPages: response.headers['x-wp-totalpages'] || 0,
+  }
 }
 
 const checkStatus = (response) => {
