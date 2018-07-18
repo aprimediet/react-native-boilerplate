@@ -3,36 +3,32 @@
  */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { StyleSheet, View } from 'react-native'
-import { Button, Title } from 'react-native-paper'
+import { Title } from 'react-native-paper'
 
-
-export default class Home extends PureComponent {
+@connect((state) => ({ http: state.get('http').toJS() }))
+class Home extends PureComponent {
   static propTypes = {
-    navigation: PropTypes.object.isRequired,
+    http: PropTypes.any,
   }
 
-  static navigationOptions = {
-    title: 'Home',
-  }
+  componentDidMount() {
+    const { http } = this.props
 
-  goAbout = () => {
-    const { navigation } = this.props
-
-    navigation.navigate('About')
+    console.log(http) //eslint-disable-line no-console
   }
 
   render() {
     return (
       <View style={styles.container}>
         <Title style={styles.instructions}>Home Screen</Title>
-        <Button raised onPress={this.goAbout}>
-          About
-        </Button>
       </View>
     )
   }
 }
+
+export default Home
 
 const styles = StyleSheet.create({
   container: {
