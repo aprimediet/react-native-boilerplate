@@ -10,3 +10,9 @@ export const HTTP_FAILURE = 'HTTP/FAILURE'
 export const SESSION_FETCH = 'SESSION/FETCH'
 export const SESSION_SET = 'SESSION/SET'
 export const SESSION_RESET = 'SESSION/RESET'
+
+// POSTS
+export const POSTS_FETCH = 'POSTS/FETCH'
+export const POSTS_ADD = 'POSTS/ADD'
+export const POSTS_SET = 'POSTS/SET'
+export const POSTS_RESET = 'POSTS/RESET'

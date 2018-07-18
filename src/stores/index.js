@@ -11,9 +11,11 @@ import { fromJS } from 'immutable'
 import global from '@/stores/global/reducer'
 import http from '@/stores/http/reducer'
 import session from '@/stores/session/reducer'
+import posts from '@/stores/posts/reducer'
 
 // Import saga
 import { httpWatcher } from '@/stores/http/saga'
+import { postsWatcher } from '@/stores/posts/saga'
 
 // Initial state
 const initialState = fromJS({})
@@ -26,11 +28,12 @@ const reducers = combineReducers({
   global,
   http,
   session,
+  posts,
 })
 
 // Create root Saga
 function* rootSaga() {
-  yield all([httpWatcher()])
+  yield all([httpWatcher(), postsWatcher()])
 }
 
 // Configure persist
@@ -38,7 +41,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
-  blacklist: ['http'],
+  blacklist: ['http', 'posts'],
 }
 
 // Create persist reducers

@@ -23,7 +23,7 @@ export function* httpRequest(options) {
     yield put({ type: HTTP_REQUEST })
 
     // Get Session from state
-    const session = yield select((state) => state.session)
+    const session = yield select((state) => state.get('session').toJS())
 
     // Set authorization headers from token in session
     const headers = yield call(setAuthorizationHeader, session, options.headers)
