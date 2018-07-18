@@ -9,9 +9,16 @@
   "pre-commit": "lint",
   "babel": {
     "presets": [
-      "react-native"
+      "react-native",
+      "@babel/preset-flow"
     ],
     "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
       [
         "module-resolver",
         {
@@ -48,7 +55,8 @@
       "ecmaVersion": 6,
       "sourceType": "module",
       "ecmaFeatures": {
-        "jsx": true
+        "jsx": true,
+        "experimentalDecorators": true
       }
     },
     "rules": {
@@ -148,17 +156,22 @@
     "react-redux": "5.0.7",
     "redux": "4.0.0",
     "redux-immutable": "4.0.0",
+    "redux-persist": "5.10.0",
     "redux-saga": "0.16.0"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
+    "@babel/cli": "7.0.0-beta.47",
+    "@babel/core": "7.0.0-beta.47",
+    "@babel/plugin-proposal-decorators": "7.0.0-beta.47",
+    "@babel/plugin-transform-react-constant-elements": "7.0.0-beta.47",
+    "@babel/plugin-transform-react-inline-elements": "7.0.0-beta.47",
+    "@babel/plugin-transform-react-jsx-source": "7.0.0-beta.47",
+    "@babel/preset-flow": "7.0.0-beta.47",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8.2.5",
     "babel-jest": "23.2.0",
     "babel-plugin-module-resolver": "3.1.1",
-    "babel-plugin-transform-react-constant-elements": "6.23.0",
-    "babel-plugin-transform-react-inline-elements": "6.22.0",
-    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-plugin-transform-react-remove-prop-types": "0.4.13",
     "babel-preset-react-native": "5.0.2",
     "eslint": "5.1.0",
