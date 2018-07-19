@@ -1,4 +1,5 @@
 import { HTTP_REQUEST, HTTP_SUCCESS, HTTP_FAILURE } from '@/constants/ActionTypes'
+import { delay } from 'redux-saga'
 import { takeLatest, call, put, select } from 'redux-saga/effects'
 import request from '@/utils/request'
 
@@ -37,11 +38,16 @@ export function* httpRequest(options) {
     // Do http Request
     const response = yield call(request, finalOptions)
 
+    // Delay response
+    yield call(delay, 2000)
+
     // Set HTTP Success state
     yield put({ type: HTTP_SUCCESS })
 
     return response
   } catch (error) {
+    // Delay response
+    yield call(delay, 2000)
     // Set HTTP Error State
     yield put({ type: HTTP_FAILURE, payload: { error } })
   }
