@@ -13,6 +13,9 @@ export const SESSION_RESET = 'SESSION/RESET'
 
 // POSTS
 export const POSTS_FETCH = 'POSTS/FETCH'
+export const POSTS_RETRIEVE = 'POSTS/RETRIEVE'
 export const POSTS_ADD = 'POSTS/ADD'
 export const POSTS_SET = 'POSTS/SET'
+export const POSTS_SET_INFO = 'POSTS/SET_INFO'
+export const POSTS_GET = 'POSTS/GET'
 export const POSTS_RESET = 'POSTS/RESET'
